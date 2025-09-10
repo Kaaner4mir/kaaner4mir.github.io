@@ -12,23 +12,17 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            /* Mobil ve desktop uyumlu tam ekran */
             display: flex;
             justify-content: center;
             align-items: center;
             background-image: url('background.jpg');
-            /* Arka plan fotoğrafı */
             background-size: cover;
-            /* Fotoğraf tüm alanı kaplar */
             background-position: center;
-            /* Ortalanmış, kırpılsa bile ortası görünür */
             background-repeat: no-repeat;
-            /* Tekrar etmesini engeller */
             font-family: 'Arial', sans-serif;
             overflow: hidden;
         }
 
-        /* Hafif koyu overlay */
         .overlay {
             position: absolute;
             top: 0;
@@ -38,10 +32,8 @@
             background-color: rgba(0, 0, 0, 0.3);
             z-index: 0;
             pointer-events: none;
-            /* Tıklamaları geç */
         }
 
-        /* Ortadaki kapsayıcı */
         .container {
             position: relative;
             z-index: 1;
@@ -49,7 +41,6 @@
             padding: 60px;
         }
 
-        /* Linkler */
         .links a {
             display: flex;
             align-items: center;
@@ -79,24 +70,11 @@
             justify-content: center;
         }
 
-        /* Delay ile sıralı animasyon */
-        .links a:nth-child(1) {
-            animation-delay: 0.2s;
-        }
+        .links a:nth-child(1) { animation-delay: 0.2s; }
+        .links a:nth-child(2) { animation-delay: 0.4s; }
+        .links a:nth-child(3) { animation-delay: 0.6s; }
+        .links a:nth-child(4) { animation-delay: 0.8s; }
 
-        .links a:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .links a:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        .links a:nth-child(4) {
-            animation-delay: 0.8s;
-        }
-
-        /* İkonlar */
         .links a i {
             font-size: 36px;
             margin-right: 15px;
@@ -104,40 +82,28 @@
             color: inherit;
         }
 
-        /* Hover efektleri */
         .links a:hover {
             transform: scale(1.08) translateY(-2px);
         }
 
         .links a:active {
             transform: scale(0.95);
-            /* Dokunmatik basınca geri bildirim */
         }
 
         .links a:hover i {
             transform: rotate(15deg) scale(1.05);
         }
 
-        /* Buton renkleri ve animasyonlar */
         .instagram {
             background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
             background-size: 400% 400%;
             animation: gradientMove 6s ease infinite;
         }
 
-        .github {
-            background-color: #24292f;
-        }
+        .github { background-color: #24292f; }
+        .linkedin { background-color: #0077b5; }
+        .mail { background-color: #dd4b39; }
 
-        .linkedin {
-            background-color: #0077b5;
-        }
-
-        .mail {
-            background-color: #dd4b39;
-        }
-
-        /* Hover renk efektleri */
         .instagram:hover {
             box-shadow: 0 0 40px rgba(245, 96, 64, 1), 0 0 60px rgba(245, 96, 64, 1);
         }
@@ -154,7 +120,6 @@
             box-shadow: 0 0 40px rgba(221, 75, 57, 1), 0 0 60px rgba(221, 75, 57, 1);
         }
 
-        /* Mobil uyumlu */
         @media screen and (max-width: 768px) {
             .links a {
                 width: 90%;
@@ -167,14 +132,12 @@
                 margin-right: 12px;
             }
 
-            /* Hover efektini kaldır */
             .links a:hover,
             .links a:hover i {
                 transform: none;
             }
         }
 
-        /* Animasyonlar */
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -183,17 +146,9 @@
         }
 
         @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
@@ -201,26 +156,24 @@
 <body>
     <div class="overlay"></div>
     <div class="container">
-       <div class="links">
-    <a href="https://www.instagram.com/kaaner4mir/" class="instagram" target="_blank" rel="noopener noreferrer">
-        <span class="link-content"><i class="fab fa-instagram"></i> Instagram</span>
-    </a>
+        <div class="links">
+            <a href="https://www.instagram.com/kaaner4mir/" class="instagram" target="_blank" rel="noopener noreferrer">
+                <span class="link-content"><i class="fab fa-instagram"></i> Instagram</span>
+            </a>
 
-    <a href="https://github.com/Kaaner4mir" class="github" target="_blank" rel="noopener noreferrer">
-        <span class="link-content"><i class="fab fa-github"></i> GitHub</span>
-    </a>
+            <a href="https://github.com/Kaaner4mir" class="github" target="_blank" rel="noopener noreferrer">
+                <span class="link-content"><i class="fab fa-github"></i> GitHub</span>
+            </a>
 
-    <a href="https://www.linkedin.com/in/emirhan-kaaner-78511b375/" class="linkedin" target="_blank" rel="noopener noreferrer">
-        <span class="link-content"><i class="fab fa-linkedin"></i> LinkedIn</span>
-    </a>
+            <a href="#" onclick="window.open('https://www.linkedin.com/in/emirhan-kaaner-78511b375/', '_blank'); return false;" class="linkedin">
+                <span class="link-content"><i class="fab fa-linkedin"></i> LinkedIn</span>
+            </a>
 
-    <a href="mailto:kaaner4mir@gmail.com" class="mail">
-        <span class="link-content"><i class="fas fa-envelope"></i> Mail</span>
-    </a>
-</div>
-
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kaaner4mir@gmail.com" class="mail" target="_blank" rel="noopener noreferrer">
+                <span class="link-content"><i class="fas fa-envelope"></i> Mail</span>
+            </a>
+        </div>
     </div>
 </body>
 
 </html>
-
