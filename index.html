@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaaner4mir</title>
+
+  <meta name="description"
+    content="Kaaner4mir - Geliştirici Portfolyosu ve Dijital Kimlik. Sosyal medya bağlantıları ve iletişim bilgileri.">
+  <meta property="og:title" content="Kaaner4mir | Dijital Kartvizit">
+  <meta property="og:description"
+    content="Kaaner4mir'in dijital dünyasına hoş geldiniz. Sosyal medya bağlantılarım ve bana ulaşabileceğiniz kanallar.">
+  <meta property="og:image" content="Images/instagram_banner.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kaaner4mir.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kaaner4mir | Dijital Kartvizit">
+  <meta name="twitter:description" content="Kaaner4mir - Yazılım Geliştirici ve Dijital İçerik Üreticisi.">
+  <meta name="twitter:image" content="Images/instagram_banner.webp">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kaaner4mir">
+  <link rel="apple-touch-icon" href="Images/app.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="Images/PPhoto.ico" type="image/x-icon">
+</head>
+
+<body class="light-mode">
+
+  <div class="controls">
+    <button id="theme-toggle" aria-label="Tema Değiştir" title="Tema Değiştir" data-tr-title="Tema Değiştir"
+      data-en-title="Switch Theme">🌓</button>
+    <button id="lang-toggle" aria-label="Dili Değiştir" title="Change Language" data-tr-title="Dili Değiştir"
+      data-en-title="Change Language">EN</button>
+
+    <div class="dropdown">
+      <button id="copy-menu-btn" aria-label="Bağlantıları Kopyala" title="Bağlantıları Kopyala"
+        data-tr-title="Bağlantıları Kopyala" data-en-title="Copy Links">🔗</button>
+      <div class="dropdown-content" id="copy-dropdown">
+        <a href="#" data-link="https://www.instagram.com/kaaner4mir">Instagram</a>
+        <a href="#" data-link="https://github.com/Kaaner4mir">GitHub</a>
+        <a href="#" data-link="https://www.linkedin.com/in/Kaaner4mir">LinkedIn</a>
+        <a href="#" data-link="mailto:kaaner4mir@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <button id="qr-btn" aria-label="QR Kod Göster" title="QR Kod" data-tr-title="QR Kod"
+      data-en-title="QR Code">📱</button>
+  </div>
+
+  <div id="qr-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 data-tr="Beni Takip Et" data-en="Follow Me">Beni Takip Et</h2>
+      <div id="qr-code-img"></div>
+      <p>Kaaner4mir</p>
+    </div>
+  </div>
+
+  <div id="contact-modal" class="modal">
+    <div class="modal-content form-modal">
+      <span class="close-modal" id="close-contact">&times;</span>
+      <h2 data-tr="Bana Mesaj Gönder" data-en="Send Me a Message">Bana Mesaj Gönder</h2>
+      <form id="contact-form">
+        <input type="text" id="form-name" placeholder="İsminiz / Your Name" required>
+        <input type="text" id="form-subject" placeholder="Konu / Subject" required>
+        <textarea id="form-message" placeholder="Mesajınız / Your Message" required></textarea>
+        <button type="submit" id="send-btn" data-tr="Gönder" data-en="Send">Gönder</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="widget" id="weather-widget">
+    <div class="widget-time" id="current-time">00:00</div>
+  </div>
+
+  <div class="main-content">
+    <div class="hero-section">
+      <h1 class="page-title">
+        <span>H</span><span>o</span><span>ş</span><span>g</span><span>e</span><span>l</span><span>d</span><span>i</span><span>n</span><span>!</span>
+      </h1>
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <div class="container">
+      <a href="https://www.instagram.com/kaaner4mir" class="instagram-link" target="_blank" rel="noopener noreferrer"
+        data-tip-tr="Hayatımdan kareler! 📸" data-tip-en="Snaps from my life! 📸">
+        <div class="link-content">
+          <img src="Images/instagram_banner.webp" alt="Kaan Erdemir Instagram Profili">
+        </div>
+      </a>
+      <a href="https://github.com/Kaaner4mir" class="github-link" target="_blank" rel="noopener noreferrer"
+        data-tip-tr="Kodlarıma göz at! 💻" data-tip-en="Check my code! 💻">
+        <div class="link-content">
+          <img src="Images/github_banner.webp" alt="Kaan Erdemir GitHub Profili">
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/Kaaner4mir" class="linkedin-link" target="_blank" rel="noopener noreferrer"
+        data-tip-tr="İş dünyasında ben! 👔" data-tip-en="Me in business! 👔">
+        <div class="link-content">
+          <img src="Images/linkedin_banner.webp" alt="Kaan Erdemir LinkedIn Profili">
+        </div>
+      </a>
+      <a href="#" class="gmail-link" id="gmail-open" data-tip-tr="Hadi konuşalım! ✉️" data-tip-en="Let's talk! ✉️">
+        <div class="link-content">
+          <img src="Images/gmail_banner.webp" alt="Kaan Erdemir Gmail İletişim">
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('PWA Kaydı Başarılı!'))
+          .catch(err => console.log('PWA Kaydı Başarısız:', err));
+      });
+    }
+  </script>
+</body>
+
+</html>
